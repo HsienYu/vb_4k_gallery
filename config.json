@@ -1,0 +1,5 @@
+{
+    "time": "5000",
+    "video_path": "/home/tinker/bbb-3840x2160-cfg02.mkv",
+    "audio_path": "pulsesrc device=alsa_output.OnBoard_D2.monitor"
+}

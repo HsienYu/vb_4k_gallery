@@ -1,0 +1,23 @@
+{
+  "name": "vb_4k_gallery",
+  "version": "1.0.0",
+  "description": "4k mediaplayer and audio streamer for VB-BC-GALLERY",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HsienYu/vb_4k_gallery.git"
+  },
+  "author": "chenghsienyu",
+  "license": "Artistic-2.0",
+  "bugs": {
+    "url": "https://github.com/HsienYu/vb_4k_gallery/issues"
+  },
+  "homepage": "https://github.com/HsienYu/vb_4k_gallery#readme",
+  "dependencies": {
+    "mqtt": "^2.18.8",
+    "tree-kill": "^1.2.1"
+  }
+}
