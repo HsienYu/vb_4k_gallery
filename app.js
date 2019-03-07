@@ -1,5 +1,5 @@
 const exec = require('child_process').exec;
-//const kill = require('tree-kill');
+const kill = require('tree-kill');
 const config = require('./config.json');
 
 var sref_a = null;
@@ -12,6 +12,10 @@ const delay = (interval) => {
 }
 const Start = async () => {
     //process.setMaxListeners(Infinity); // <== Important line
+    //set default audio sink to minijack output
+    let call = 'pacmd set-default-sink alsa_output.OnBoard_D2'
+    exec(call);
+
     while (true) {
 
         if (sref_a == null) {
@@ -53,6 +57,21 @@ const Start = async () => {
             sref_v = null;
         });
 
+    }
+}
+
+const Stop = () => {
+    if (sref_a && sref_a.pid > 0) {
+        kill(sref_a.pid, 'SIGTERM', function () {
+            myLog('Killed audio stream with PID: ', sref_a.pid);
+            sref_a = null;
+        });
+    }
+    if (sref_v && sref_v.pid > 0) {
+        kill(sref_v.pid, 'SIGTERM', function () {
+            myLog('Killed video player with PID: ', sref_v.pid);
+            sref_v = null;
+        });
     }
 }
 
