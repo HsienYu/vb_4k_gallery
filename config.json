@@ -1,5 +1,11 @@
 {
     "tol": "4000",
     "video_path": "/home/tinker/bbb-3840x2160-cfg02.mkv",
-    "audio_path": "filesrc location=/home/tinker/bbb-3840x2160-cfg02.m4a ! decodebin"
+    "audio_path": "filesrc location=/home/tinker/bbb-3840x2160-cfg02.m4a ! decodebin",
+    "verbose": "true",
+    "host": "192.168.1.98",
+    "username": "myUser",
+    "password": "myPass",
+    "namespace": "4k",
+    "playerId": "1"
 }
