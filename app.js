@@ -90,7 +90,7 @@ const Start = async () => {
         //console.log('video_exit');
         sref_v = null;
         kill(sref_a.pid, 'SIGTERM', function () {
-            myLog('Killed audio stream with PID: ', sref_a.pid);
+            //myLog('Killed audio stream with PID: ', sref_a.pid);
             sref_a = null;
             client.publish(`${config.namespace}/mqtt-media-player/#`, 'stop_4k');
         });
@@ -99,17 +99,10 @@ const Start = async () => {
 }
 
 const Stop = () => {
-    if (sref_a && sref_a.pid > 0) {
-        kill(sref_a.pid, 'SIGTERM', function () {
-            myLog('Killed audio stream with PID: ', sref_a.pid);
-            sref_a = null;
-        });
-    }
     if (sref_v && sref_v.pid > 0) {
         kill(sref_v.pid, 'SIGTERM', function () {
-            myLog('Killed video player with PID: ', sref_v.pid);
+            //myLog('Killed video player with PID: ', sref_v.pid);
             sref_v = null;
-            client.publish(`${config.namespace}/4k-player/#`, 'stop_4k_videos');
         });
     }
 }
