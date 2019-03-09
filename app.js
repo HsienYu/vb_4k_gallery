@@ -109,7 +109,7 @@ const Stop = () => {
         kill(sref_v.pid, 'SIGTERM', function () {
             myLog('Killed video player with PID: ', sref_v.pid);
             sref_v = null;
-            client.publish(`${config.namespace}/mqtt-media-player/#`, 'stop_videos');
+            client.publish(`${config.namespace}/4k-player/#`, 'stop_4k_videos');
         });
     }
 }
