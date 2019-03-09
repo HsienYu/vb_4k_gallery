@@ -92,7 +92,7 @@ const Start = async () => {
         kill(sref_a.pid, 'SIGTERM', function () {
             //myLog('Killed audio stream with PID: ', sref_a.pid);
             sref_a = null;
-            client.publish(`${config.namespace}/mqtt-media-player/#`, 'stop_4k');
+            client.publish(`${config.namespace}/mqtt-media-player/#`, 'stop_4k_videos');
         });
     });
 
