@@ -89,9 +89,9 @@ const Start = async () => {
     sref_v.on('close', (code) => {
         //console.log('video_exit');
         sref_v = null;
-        kill(sref_a.pid, 'SIGTERM', function () {
+        kill(sref_v.pid, 'SIGTERM', function () {
             //myLog('Killed audio stream with PID: ', sref_a.pid);
-            sref_a = null;
+            sref_v = null;
             client.publish(`${config.namespace}/mqtt-media-player/#`, 'stop_4k_videos');
         });
     });
