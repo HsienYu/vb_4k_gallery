@@ -1,0 +1,5 @@
+The binaries can be downloaded from this thread at the tinkerboarding.co.uk forums:
+
+https://www.tinkerboarding.co.uk/forum/thread-329.html
+
+They seem to be taken from an unspecified ChromeOS install.

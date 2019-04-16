@@ -1,0 +1,18 @@
+Compiled from the MPV Git repo
+
+https://github.com/mpv-player/mpv
+
+Commit 104b510774
+
+Added ffmpeg options:
+
+--enable-rkmpp
+--enable-nonfree
+--enable-opencl
+--enable-opengl
+--enable-libdrm
+--enable-version3
+
+Added mpv options:
+
+--enable-egl-drm

@@ -1,0 +1,4 @@
+All sources can be found at the Rockchip-Linux repo:
+
+https://github.com/rockchip-linux/gstreamer-rockchip
+https://github.com/rockchip-linux/gstreamer-rockchip-extra

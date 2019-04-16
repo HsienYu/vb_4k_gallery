@@ -1,0 +1,7 @@
+All sources can be found in my clone of the rockchip server
+
+https://github.com/teacupx/xserver
+
+Stable is branch "rockchip-1.19"; Experimental is branch "1.19-experimental".
+
+I also made changes to the Debian package control files, in order to adapt them to Armbian Bionic. They can be extracted from the packages themselves.

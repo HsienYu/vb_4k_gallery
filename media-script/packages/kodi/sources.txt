@@ -1,0 +1,13 @@
+All packages built from the Kodi Git master branch:
+
+https://github.com/xbmc/xbmc
+
+Tag: 18.0b3-Leia
+
+Compiled with the following command line:
+
+cmake -lpthread -DFFMPEG_URL=tools/depends/target/ffmpeg/ffmpeg-4.0.2-Leia-Alpha3.tar.gz -DENABLE_X11=OFF -DENABLE_INTERNAL_FFMPEG=ON -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_VAAPI=OFF -DENABLE_VDPAU=OFF -DENABLE_OPENGLES=ON -DCORE_PLATFORM_NAME=gbm -DGBM_RENDER_SYSTEM=gles -DENABLE_OPENGL=OFF -DCPACK_GENERATOR=DEB -DDEBIAN_PACKAGE_VERSION=18.0b3 -DDEBIAN_PACKAGE_REVISION=0bionic-rockchip1 -DDEB_PACKAGE_ARCHITECTURE=armhf -DWITH_ARCH=arm -DWITH_CPU=cortex-a17 ..
+cmake --build . -- -j4
+cpack
+
+Some minor tweaks were made to the resulting packages, to add GBM wrapper and correct dependency problems.

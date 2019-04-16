@@ -1,0 +1,8 @@
+Arm Compute Library:
+
+https://github.com/ARM-software/ComputeLibrary
+
+
+Cgminer-Skein:
+
+https://github.com/reorder/cgminer_skein
